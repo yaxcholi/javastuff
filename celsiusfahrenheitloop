@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    final int SENTINEL = -99;
+    final double CONVFACTOR = 9.0 / 5.0;
+    double fahrenheitTerm = 0;
+
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter temperature in Celsius to convert to Fahrenheit:");
+    double celsiusTerm = scanner.nextDouble();
+
+    while (fahrenheitTerm != SENTINEL) {
+     
+      fahrenheitTerm = celsiusTerm * CONVFACTOR + 32.0;
+
+    
+      System.out.println(celsiusTerm + " degrees Celsius is equal to " + fahrenheitTerm + " degrees Fahrenheit");
+
+    
+      System.out.println("Enter another temperature in Celsius (or -99 to exit):");
+      celsiusTerm = scanner.nextDouble();
+    }
+
+  
+    scanner.close();
+
+    System.out.println("Exiting the program.");
+  }
+}
